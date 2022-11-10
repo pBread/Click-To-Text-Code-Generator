@@ -2,13 +2,12 @@ import { Typography } from "antd";
 import { CodeBlock, InputForm } from "components";
 import type { GetStaticProps } from "next";
 import { useState } from "react";
+import type { State } from "state";
 
 const { Title } = Typography;
 
 export default function Home() {
-  const [state, setState] = useState({ text: "", toNumber: "" });
-
-  const link = `sms:${state.toNumber}`;
+  const [state, setState] = useState<State>({ text: "", toNumber: "" });
 
   return (
     <>

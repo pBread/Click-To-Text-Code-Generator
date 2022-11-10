@@ -1,23 +1,17 @@
 import { Form, Input } from "antd";
-import type { Dispatch, SetStateAction } from "react";
+import type { SetState, State } from "state";
 
 export function InputForm({
-  text,
-  toNumber,
-}: {
-  text: string;
-  toNumber: string;
-  setState: Dispatch<
-    SetStateAction<{
-      text: string;
-      toNumber: string;
-    }>
-  >;
+  setState,
+  ...state
+}: State & {
+  setState: SetState;
 }) {
-  const [form] = Form.useForm();
+  const [form] = Form.useForm<State>();
 
-  function onValuesChange(it: any) {
-    console.log("handleChange", it);
+  function onValuesChange(changes: any, newState: State) {
+    console.log("onValuesChange", newState);
+    setState(newState);
   }
 
   return (
