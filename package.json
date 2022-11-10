@@ -6,6 +6,7 @@
     "isomorphic-fetch": "^3.0.0",
     "lodash": "^4.17.21",
     "next": "11.0.1",
+    "qrcode.react": "^3.1.0",
     "query-string": "^7.0.1",
     "react": "17.0.2",
     "react-code-blocks": "^0.0.9-0",

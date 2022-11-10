@@ -8,7 +8,7 @@ const { Title } = Typography;
 
 export default function Home() {
   const [state, setState] = useState<State>({
-    text: "Send me updates about my concert",
+    text: "Send me updates about my concert!",
     toNumber: "",
   });
 

@@ -1,6 +1,3 @@
-import Image from "next/image";
-import logo from "public/logo.png";
-
 export function Header({ className }) {
   return (
     <div className={className}>
@@ -9,7 +6,12 @@ export function Header({ className }) {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <Image alt="logo" src={logo} height={47} width={47 * (1005 / 305)} />
+        <img
+          alt="logo"
+          src="https://i.imgur.com/3d30tbf.png"
+          height={47}
+          width={47 * (1005 / 305)}
+        />
       </a>
 
       <div />

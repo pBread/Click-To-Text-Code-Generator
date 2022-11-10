@@ -1,6 +1,8 @@
 import { Form, Input } from "antd";
 import type { SetState, State } from "state";
 
+const { TextArea } = Input;
+
 export function InputForm({
   setState,
   ...state
@@ -17,13 +19,17 @@ export function InputForm({
   return (
     <Form
       form={form}
+      initialValues={state}
       labelCol={{ span: 4 }}
       layout="vertical"
-      wrapperCol={{ span: 14 }}
       onValuesChange={onValuesChange}
+      wrapperCol={{ span: 14 }}
     >
       <Form.Item label="Phone number" name="toNumber">
         <Input />
+      </Form.Item>
+      <Form.Item label="Message" name="text">
+        <TextArea />
       </Form.Item>
     </Form>
   );

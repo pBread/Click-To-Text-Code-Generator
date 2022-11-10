@@ -1,16 +1,16 @@
 import { CopyBlock, dracula } from "react-code-blocks";
 import type { State } from "state";
 import { makeLink } from "state";
-
-const buttonCode = `\
-<a href="sms:+18475070348">Click here to text us!</a>\
-`;
+import { QRCodeCanvas } from "qrcode.react";
 
 export function CodeBlock(state: State) {
   const smsLink = makeLink(state);
 
   return (
     <div className="code-block-wrapper">
+      <div>
+        <QRCodeCanvas value={smsLink} />
+      </div>
       <div>
         <a href={smsLink}> Click here to text us! </a>
         <CopyBlock
