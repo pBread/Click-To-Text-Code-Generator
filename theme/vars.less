@@ -1,0 +1,66 @@
+// default variables https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+@import "~antd/lib/style/themes/default.less";
+@import "~antd/lib/style/color/colorPalette.less";
+
+/****************************************************
+ Colors
+****************************************************/
+@gray-1: #fcfcfc;
+@gray-2: #fafafa;
+@gray-3: #f5f5f5;
+@gray-4: #e8e8e8;
+@gray-5: #d9d9d9;
+@gray-6: #bfbfbf;
+@gray-7: #8c8c8c;
+@gray-8: #595959;
+@gray-9: #434343;
+@gray-10: #262626;
+@gray-11: #1f1f1f;
+@gray-12: #141414;
+
+@body-background: @gray-3;
+
+/****************************************************
+ Mixins
+****************************************************/
+.hover-filter() {
+  -webkit-transition: filter @animation-duration-base ease-in-out;
+  transition: filter @animation-duration-base ease-in-out;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.no-drag() {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.no-scroll() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.no-select() {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/****************************************************
+ Sizing
+****************************************************/
+@padding-side: 2.5%;
+
+/****************************************************
+ Styles
+****************************************************/
+@border-light: 1px solid @gray-4;

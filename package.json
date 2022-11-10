@@ -1,0 +1,51 @@
+{
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
+    "@twilio-labs/serverless-runtime-types": "^2.1.1",
+    "antd": "^4.16.12",
+    "isomorphic-fetch": "^3.0.0",
+    "lodash": "^4.17.21",
+    "next": "11.0.1",
+    "query-string": "^7.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.4",
+    "redux-logger": "^3.0.6",
+    "twilio": "^3.66.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+    "@babel/preset-env": "^7.14.9",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/babel__core": "^7.1.15",
+    "@types/isomorphic-fetch": "^0.0.35",
+    "@types/lodash": "^4.14.172",
+    "@types/node": "^16.4.10",
+    "@types/react": "17.0.15",
+    "@types/react-redux": "^7.1.18",
+    "@types/redux-logger": "^3.0.9",
+    "@types/twilio": "^3.19.3",
+    "@zeit/next-less": "^1.0.1",
+    "concurrently": "^6.2.0",
+    "dotenv": "^10.0.0",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.0.1",
+    "glob-promise": "^4.2.0",
+    "less": "^4.1.1",
+    "next-compose-plugins": "^2.2.1",
+    "next-with-less": "^1.0.0",
+    "nodemon": "^2.0.12",
+    "ora": "^5.4.1",
+    "typescript": "4.3.5"
+  },
+  "name": "t-next",
+  "private": true,
+  "scripts": {
+    "build": "node packages/next-twilio/bin build;",
+    "deploy": "node packages/next-twilio/bin deploy",
+    "dev": "next dev"
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,21 @@
+@import url("~theme/vars.less");
+
+.wrapper {
+  align-items: center;
+  background: white;
+  border-bottom: @border-light;
+  display: flex;
+  padding-bottom: @padding-sm;
+  padding-top: @padding-sm;
+
+  :nth-child(2) {
+    flex: auto;
+  }
+}
+
+.wrapper img {
+  .hover-filter();
+  .no-drag();
+
+  cursor: pointer;
+}
