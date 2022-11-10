@@ -30,6 +30,7 @@
 .main {
   height: 100%;
   min-height: 100vh;
+  background: #f5f5f5;
 }
 
 .main .main-header {
@@ -66,4 +67,20 @@
 
 .main .main-header img:hover {
   filter: brightness(90%);
+}
+
+.code-block-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.code-block-wrapper > * {
+  background: white;
+  border: 1px solid var(--gray-4);
+  margin-top: var(--padding-md);
+  padding: var(--padding-sm);
+}
+
+.code-block-wrapper > * > * {
+  margin-top: var(--padding-sm);
 }

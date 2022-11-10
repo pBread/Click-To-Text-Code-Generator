@@ -7,7 +7,10 @@ import type { State } from "state";
 const { Title } = Typography;
 
 export default function Home() {
-  const [state, setState] = useState<State>({ text: "", toNumber: "" });
+  const [state, setState] = useState<State>({
+    text: "Send me updates about my concert",
+    toNumber: "",
+  });
 
   return (
     <>
@@ -18,7 +21,7 @@ export default function Home() {
       </Title>
       <InputForm {...state} setState={setState} />
 
-      <CodeBlock />
+      <CodeBlock {...state} />
     </>
   );
 }
