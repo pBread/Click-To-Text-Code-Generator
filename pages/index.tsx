@@ -6,9 +6,9 @@ import { useState } from "react";
 const { Title } = Typography;
 
 export default function Home() {
-  const [fromNumber, setFromNumber] = useState("");
-  const [toNumber, setToNumber] = useState("");
-  const [text, setText] = useState("");
+  const [state, setState] = useState({ text: "", toNumber: "" });
+
+  const link = `sms:${state.toNumber}`;
 
   return (
     <>
@@ -17,14 +17,7 @@ export default function Home() {
         Generate the code you need to allow your customers to simply click and
         text you.
       </Title>
-      <InputForm
-        fromNumber={fromNumber}
-        text={text}
-        toNumber={toNumber}
-        setFromNumber={setFromNumber}
-        setToNumber={setToNumber}
-        setText={setText}
-      />
+      <InputForm {...state} setState={setState} />
 
       <CodeBlock />
     </>

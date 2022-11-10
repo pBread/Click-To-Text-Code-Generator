@@ -1,17 +1,18 @@
-import { Button, Form, Input, Radio } from "antd";
+import { Form, Input } from "antd";
 import type { Dispatch, SetStateAction } from "react";
 
 export function InputForm({
-  fromNumber,
-  toNumber,
   text,
+  toNumber,
 }: {
-  fromNumber: string;
   text: string;
   toNumber: string;
-  setFromNumber: Dispatch<SetStateAction<string>>;
-  setText: Dispatch<SetStateAction<string>>;
-  setToNumber: Dispatch<SetStateAction<string>>;
+  setState: Dispatch<
+    SetStateAction<{
+      text: string;
+      toNumber: string;
+    }>
+  >;
 }) {
   const [form] = Form.useForm();
 
@@ -23,11 +24,11 @@ export function InputForm({
     <Form
       form={form}
       labelCol={{ span: 4 }}
-      layout="horizontal"
+      layout="vertical"
       wrapperCol={{ span: 14 }}
       onValuesChange={onValuesChange}
     >
-      <Form.Item label="Phone number" name="layout">
+      <Form.Item label="Phone number" name="toNumber">
         <Input />
       </Form.Item>
     </Form>
