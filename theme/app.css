@@ -83,4 +83,5 @@
 
 .code-block-wrapper > * > * {
   margin-top: var(--padding-sm);
+  overflow: scroll;
 }

@@ -8,5 +8,5 @@ export interface State {
 export type SetState = Dispatch<SetStateAction<State>>;
 
 export function makeLink(state: State) {
-  return `sms:${state.toNumber}&body=${state.text}`.replaceAll(" ", "%20");
+  return `sms://${state.toNumber};?&body=${state.text}`.replace(/ /g, "%20");
 }
