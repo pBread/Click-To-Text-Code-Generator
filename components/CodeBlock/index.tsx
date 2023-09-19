@@ -1,7 +1,7 @@
+import { QRCodeCanvas } from "qrcode.react";
 import { CopyBlock, dracula } from "react-code-blocks";
 import type { State } from "state";
 import { makeLink } from "state";
-import { QRCodeCanvas } from "qrcode.react";
 
 export function CodeBlock(state: State) {
   const smsLink = makeLink(state);
